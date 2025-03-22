@@ -21,7 +21,7 @@
   .main li.stamina {
       list-style: none;
       padding: 10px 0 0 50px;
-      background-image: url("/images/lifestyle/stamina.png");
+      background-image: url("/homepage/images/lifestyle/stamina.png");
       background-position: left left;
       background-repeat: no-repeat;
       background-size: 40px;
@@ -30,7 +30,7 @@
   .main li.strength {
       list-style: none;
       padding: 10px 0 0 50px;
-      background-image: url("/images/lifestyle/strength.png");
+      background-image: url("/homepage/images/lifestyle/strength.png");
       background-position: left left;
       background-repeat: no-repeat;
       background-size: 33px;
@@ -39,7 +39,7 @@
   .main li.flexibility {
       list-style: none;
       padding: 10px 0 0 50px;
-      background-image: url("/images/lifestyle/flexibility.jpg");
+      background-image: url("/homepage/images/lifestyle/flexibility.jpg");
       background-position: left;
       background-repeat: no-repeat;
       background-size: 40px;

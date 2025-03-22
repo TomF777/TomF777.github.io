@@ -68,7 +68,7 @@
     margin: 30px;
     width: 70px;
     height: 70px;
-    background-image: url('./homepage/images/game/bootstrap_icon.png');
+    background-image: url('/homepage/images/game/bootstrap_icon.png');
     background-size: 100%;
     position: relative;
     animation-name: anim3;

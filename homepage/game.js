@@ -36,7 +36,7 @@
 
     // image for "fire icon"
     const imgFire = new Image();
-    imgFire.src = '/images/game/fire.png'
+    imgFire.src = './images/game/fire.png'
 
     // intro message
     ctx.font = "22px Lucida Console";

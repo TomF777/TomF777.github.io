@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="author" content="Tom Frydek">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link href="style_lifestyle.css" rel="stylesheet">
+
+        <title>Lifestyle</title>
+    </head>
+
+    <body>
+        <div class="menu">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">main page</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="lifestyle.html">lifestyle</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="travel.html">travel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="game.html">game</a>
+                </li>
+            </ul>
+        </div>
+
+    <div class="header">
+        <h4> Lifestyle </h4>
+    </div>
+
+    <section>
+        <div class="left">
+            <p><img src="/images/lifestyle/lifestyle.png" alt="healthy lifestyle" style="float:left; max-width:100%; width:500px;"></p>
+        </div>
+
+        <div class="main">
+            <h3><p>What is healthy life style ?</p></h3>
+
+            <p>A way of living that helps you enjoy more aspects fo your life.
+                Health is not just about avoiding a disease or illness.
+                It is about physical, mental and social weel-being too.
+                The three main components of being physically fit are:
+                <ul>
+                    <li class="stamina">Stamina</li>
+                    <li class="strength">Strength</li>
+                    <li class="flexibility">Flexibility</li>
+                </ul>
+                Physical activity is necessary to stimulate the body's own
+                natural maintenance and repair system.
+            </p>
+
+            <p>
+                It is important to enjoy the food you eat.
+                You can build a healthy and balanced diet by choosing your food
+                as if you are building a Food Pyramid:
+                <ul style="float:left;">
+                    <li>Potatoes, Bread, Rice and Cereals - Eat Most</li>
+                    <li>Vegetables and Fruit - Eat More</li>
+                    <li>Meat, Fish and Pulses - Eat Moderately</li>
+                    <li>Milk and Dairy Products - Eat Moderately</li>
+                    <li>Fats, Oil, Sugar and Salt - Eat Less</li>
+                </ul>
+                <img src="/images/lifestyle/food_pyramid.jpg" alt="food pyramid" style="float:left; max-width:100%; width:300px;">
+            </p>
+
+        </div>
+
+        <div class="right">
+            <h3><p> BMI calculator</p></h3>
+            <p> BMI is an incredibly useful tool for risk prediction.
+                When we look at human health data,
+                BMI is one of the most effective risk prediction tools we have in modern medicine.
+                This is especially true when BMI is utilized to predict the risk of chronic diseases and many of the leading causes of death</p>
+
+            <form onsubmit="bmiCalculate(); return false;">
+
+                <label>
+                    <input type="radio" name="bmiSex" value="female">
+                    female
+                </label>
+                <br>
+
+                <label>
+                    <input type="radio" name="bmiSex" value="male">
+                    male
+                </label>
+                <br>
+
+                <input type="number" autocomplete="off" autofocus id="bmiHeight" placeholder="cm" min="0">
+                <label for="bmiHeight">Height in cm</label><br>
+
+                <input type="number" autocomplete="off" autofocus id="bmiWeight" placeholder="kg" min="0">
+                <label for="bmiWeight">Weight in kg</label><br>
+                <br>
+                <input type="submit" value="Calculate BMI">
+                <button type="button" onclick="resetBmi();" value="Reset">Reset</button>
+            </form>
+
+            <br>
+            <p><samp> Your BMI index: <spam id="bmiResult"> </samp> </p>
+
+            <!-- multiple progress bars for displaying BMI ranges-->
+            <div class="progress" style="width: 90%;" aria-valuemin="0" aria-valuemax="40">
+                <!-- bmi ranges values (18.5, 25, 30) are scaled to the total length of the bar which is 40 -->
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 46.2%; font-size: 0.8em">Underweight</div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 16.2%; font-size: 0.8em">Normal</div>
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 12.5%; font-size: 0.8em">Overweight</div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 25%; font-size: 0.8em">Obesity</div>
+            </div>
+            <div class="progress" style="width: 90%; height: 8px;" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-info" id="bmiBar" role="progressbar" style="width: 0%;"></div>
+            </div>
+
+            <p id="bmiText"></p>
+
+        </div>
+    </section>
+
+
+    <div class="footer">
+        <h5><p>Useful links</p></h5>
+        <a href="https://www.calculator.net/body-fat-calculator.html" target="_blank">Body Fat Calculator</a>
+        <a href="https://www.health.harvard.edu/blog/healthy-lifestyle-5-keys-to-a-longer-life-2018070514186" target="_blank">Harvard Medical School</a>
+        <a href="https://www.eatingwell.com/" target="_blank">Eating Well</a>
+    </div>
+
+
+    <script>
+        function resetBmi()
+        {
+            document.getElementById('bmiHeight').value = null;
+            document.getElementById('bmiWeight').value = null;
+            document.getElementById('bmiText').innerHTML = null;
+            document.getElementById('bmiResult').innerHTML = null;
+            document.getElementById('bmiBar').style.width = "0%";
+        }
+
+        function bmiCalculate()
+        {
+            let sexElements = document.getElementsByName('bmiSex');
+            let sexElementsLen = sexElements.length;
+            let sex;
+            let bmiIdx;
+            let bmiEval;
+
+            for (let i = 0; i < sexElementsLen; i++) {
+                if (sexElements[i].checked) sex = sexElements[i].value;
+            }
+
+            // convert centimeters to meters
+            let height = document.getElementById('bmiHeight').value / 100;
+            let weight = document.getElementById('bmiWeight').value;
+
+            // check input data correctness
+            if ((height == 0) || (height === "undefined") ||
+             (weight == 0) || (weight === "undefined") ||
+              (sex === "undefined")){
+                document.getElementById('bmiResult').style.color = "red";
+                document.getElementById('bmiResult').innerHTML = 'Wrong input data';
+            } else {
+                bmiIdx = (weight / Math.pow(height, 2)).toFixed(2);
+                document.getElementById('bmiResult').style.color = "blue";
+                document.getElementById('bmiResult').innerHTML = bmiIdx;
+
+                // evaluate category of BMI range
+                if (bmiIdx < 18.5) {
+                    bmiEval = `Underweight. Increased risk of health problems.
+                                <p> Being underweight might mean you’re not getting all the nutrients, vitamins, and minerals that your body needs to be healthy.
+                                It may affect your skin, hair, and teeth or you may feel more tired than you should.
+                                Women may have irregular periods and have a greater chance of osteoporosis.
+                                <p>You should speak to your doctor to find out why you have a low BMI and about how to gain weight healthily.</p> </p> `;
+                } else if (bmiIdx >= 18.5 && bmiIdx < 25){
+                    bmiEval = `Normal Weight. Least risk of health problem.
+                              <p>Having a BMI score within the healthy weight range is a good sign that you are the right weight for your height.
+                              But always remember that the BMI does not tell you anything about the make-up of your body -
+                              such as how much muscle or fat you have, how much physical activity you do, or your body type.
+                              <p>So, keep an eye on your general health, diet, and exercise and track any changes in your weight.</p> </p> `;
+                } else if (bmiIdx >= 25 && bmiIdx < 30) {
+                    bmiEval = `Overweight. Increased risk of health problems.
+                               <p>If your BMI is in the overweight range you may be more at risk of
+                               developing health conditions such as type 2 diabetes, heart disease, gallstones and cancer.
+                               <p>You should reduce your weight and move more</p> </p>`;
+                } else if (bmiIdx > 30) {
+                    bmiEval = `Obesity. Very High risk of health problems.
+                              <p> There is a high chance you have class 1 obesity.
+                              Your chances of developing health issues associated with being overweight can increase if you are obese.
+                              <p>You should see your doctor and talk about a plan to lower your BMI in a healthy way</p> </p>`;
+                }
+
+                document.getElementById('bmiText').innerHTML = bmiEval;
+                <!-- bmi value scaled to the total length of the bar which is 40 -->
+                document.getElementById('bmiBar').style.width = (bmiIdx / 40) * 100 + "%";
+            }
+
+        }
+
+    </script>
+
+    </body>
+
+</html>

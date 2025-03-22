@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .left {
+      float: left;
+      width: 30%;
+      padding: 10px 5px;
+  }
+
+  .main {
+      float: left;
+      width: 40%;
+      padding: 10px 5px ;
+  }
+
+  .main li {
+      list-style-type:circle;
+  }
+
+  .main li.stamina {
+      list-style: none;
+      padding: 10px 0 0 50px;
+      background-image: url("/images/lifestyle/stamina.png");
+      background-position: left left;
+      background-repeat: no-repeat;
+      background-size: 40px;
+  }
+
+  .main li.strength {
+      list-style: none;
+      padding: 10px 0 0 50px;
+      background-image: url("/images/lifestyle/strength.png");
+      background-position: left left;
+      background-repeat: no-repeat;
+      background-size: 33px;
+  }
+
+  .main li.flexibility {
+      list-style: none;
+      padding: 10px 0 0 50px;
+      background-image: url("/images/lifestyle/flexibility.jpg");
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: 40px;
+  }
+
+  .right {
+      float: right;
+      width: 27%;
+      padding: 10px 2px;
+  }
+
+  /* Clear floats after the columns */
+  section::after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+
+  .footer a:link, .footer a:visited  {
+      background-color: rgb(228,135,239);
+      color: white;
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 15px;
+      letter-spacing: 5px;
+      display: inline-block;
+      }
+
+  .footer a:hover, .footer a:active {
+  background-color: rgb(232,43,156);
+  }
+
+
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media only screen and (max-width: 600px) {
+      /* For mobile phones: */
+      .menu, .main, .left, .right {
+          width: 100%;
+      }
+  }

@@ -1,0 +1,236 @@
+body {
+    background-color: #fff;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: arial;
+}
+
+.menu {
+    margin-bottom: 0.1rem;
+    padding: 0.4rem;
+}
+
+.header {
+    background-color: #477bff;
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+}
+
+.footer {
+    background-color: #477bff;
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+}
+
+
+.section {
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+.section:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
+
+#main-header {
+    color: white;
+    text-shadow: 1px 1px 20px rgb(0,0,250), 0 0 50px rgb(0,0,250), 0 0 5px rgb(0,0,250);
+}
+
+.carousel-item {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: green;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: rgb(60,180,80);
+  }
+
+
+button, input[type="submit"] {
+    background-color: #d9edff;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    vertical-align: middle;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #477bff;
+}
+
+
+input[type="number"] {
+    line-height: 1.8;
+    width: 25%;
+}
+
+input[type="text"] {
+    line-height: 1.8;
+    width: 25%;
+}
+
+input[type="text"]:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+p.shadow-move {
+    font-size: 18px;
+    color: rgb(225,115,255);
+    text-shadow: 2px 2px 0 #ff005e, 2px 2px 0 #00d4ff;
+    animation: shadow-move-anim 3s infinite;
+}
+
+@keyframes shadow-move-anim {
+    0%, 100% {
+        text-shadow: 2px 2px 0 #ff005e, 2px 2px 0 #00d4ff;
+    }
+    50% {
+        text-shadow: -2px -2px 0 #00d4ff, -2px -2px 0 #ff005e;
+    }
+}
+
+th {
+    background-color: rgb(0,245,190);
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid black;
+  }
+
+tr:nth-child(odd) {
+    background-color: rgb(0,185,190);
+  }
+
+tr:nth-child(even) {
+    background-color: rgb(135,185,190);
+  }
+
+tr:hover {
+    background-color: rgb(255,165,0);
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Arial";
+    font-size: 15px;
+    color: rgb(0,0,254);
+    letter-spacing: 2px;
+  }
+
+
+div.center {
+    text-align: center;
+    font-size: 16px;
+}
+
+em {
+    text-shadow: 1px 1px orange;
+    color: Green;
+}
+
+.main-picture:hover {
+    filter: contrast(150%);
+    filter: sepia(100%);
+    transition-duration: 1.0s;
+}
+
+#main-pre {
+    display: block;
+    font-family: "Monaco", "Verdana";
+    white-space: pre-line;
+    margin: 1em 0;
+    font-size: 1.1em;
+    margin-left: 20px;
+}
+
+a.link-main:link {
+    color: gray;
+    background-color: transparent;
+    text-decoration: none;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-style: italic;
+  }
+
+a.link-main:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* based on code from : https://prismic.io/blog/css-text-animations */
+.neon-text{
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px #ff005e, 0 0 20px #ff005e, 0 0 20px #ff005e, 0 0 20px #ff005e, 0 0 20px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 20px #00d4ff, 0 0 20px #00d4ff, 0 0 20px #00d4ff, 0 0 20px #00d4ff, 0 0 20px #00d4ff;
+    }
+}
+
+
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .carousel-item {
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+        border-style: ridge;
+        border-width: 2px;
+        border-color: green;
+      }
+}
+

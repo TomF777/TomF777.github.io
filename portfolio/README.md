@@ -1,19 +1,9 @@
 # Personal Portfolio ⚡️ 
-> A clean, beautiful, responsive portfolio template for Software Developers!
+A clean, beautiful, responsive portfolio template for Software Developers!
 
-> https://TomF777.github.io
+https://TomF777.github.io/portfolio
 
 
-
-### Website Preview
-<p align="center"> 
-  <kbd>
-    <a href="https://TomF777.github.io" target="_blank"><img src="examples/preview.gif">
-  </a>
-  </kbd>
-</p>
-
-:star: Star me on GitHub — it helps!
 
 ## Features 📋
 ⚡️ Fully Responsive\

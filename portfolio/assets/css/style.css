@@ -141,7 +141,7 @@ body {
 } */
 
 a {
-  color: #004d40;
+  color: #004d40; 
 }
 
 /* main blockqoute */
@@ -320,8 +320,9 @@ h3 {
   position: relative;
 } */
 
+/* background color of main section (Name and general role description)*/
 #intro.section {
-  background: #a7ffeb repeat;
+  background: #00FFEE repeat;
   position: relative;
 }
 

@@ -498,7 +498,11 @@ of each drug container to estimate the degradation of the drug.
                   <li><b>Tools:</b>Docker, Portainer, Python, InfluxDB, Grafana, TwinCat3</li>
                   <li>IIoT project for data exchange between PLC in OT and IT area with usage of MQTT protocol.</li>
                   <li>Collect data from different sensors, PLCs and devices in OT area. 
-				  The collected data are preprocessed in Beckhoff IPC, converted into JSON payload and published with MQTT into IT area.</li>
+				  The collected data are preprocessed in 
+				  <br>
+				  <br>
+				  <br>
+				  Beckhoff IPC, converted into JSON payload and published with MQTT into IT area.</li>
 
 
                 </ul>
@@ -538,7 +542,11 @@ of each drug container to estimate the degradation of the drug.
                   <li><b>Tools:</b>Docker, Portainer, Python, InfluxDB, Grafana, TwinCat3</li>
                   <li>IIoT project for data exchange between PLC in OT and IT area with usage of OPC UA protocol and data analytics.</li>
                   <li>Collect data from different sensors, PLCs and devices in OT area. 
-				  The collected data are preprocessed in Beckhoff IPC, packed into StructuredType variable and exposed in OPC UA server into IT area.</li>
+				  The collected data are preprocessed in 
+				  <br>
+				  <br>
+				  <br>
+				  Beckhoff IPC, packed into StructuredType variable and exposed in OPC UA server into IT area.</li>
 
                 </ul>
                 <div class="card-action">					  
@@ -616,7 +624,11 @@ of each drug container to estimate the degradation of the drug.
     
 				  <li>IIoT project for data exchange between PLC in OT and IT area with usage of REST API and data analytics.</li>
                   <li>Collect data from different sensors, PLCs and devices in OT area. 
-				  The collected data are preprocessed in Beckhoff IPC, converted into JSON payload and published as 
+				  The collected data are preprocessed in 
+				  <br>
+				  <br>
+				  <br>
+				  Beckhoff IPC, converted into JSON payload and published as 
 				  HTTP REST API POST request to HTTP Server located in IT area.</li>
                 </ul>
 				
@@ -632,6 +644,140 @@ of each drug container to estimate the degradation of the drug.
                       class="fa fa-github"></i></a>
                 </div>
 				
+              </div>
+            </div>
+          </div>
+		  
+		  
+		  <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Screenshot of web app" src="./assets/img/project-IIoT-mqtt-kafka-elk-tia-portal.png"
+                style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">IIoT - MQTT, Kafka, ELK stack<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                   IIoT monitoring using Siemens PLC, MQTT, Kafka, Python, MongoDB and ELK stack
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title teal-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+				<b>Tools:</b> HiveMQ, Kafka, Docker, Portainer, Elasticsearch, Logstash, Kibana, Python, MongoDB, Grafana, Tia Portal
+                
+				<br>
+				<br>
+				 IIoT monitoring pipeline for data collection from different sensors, states and devices connected to PLC in OT area.
+				 <br>
+						The collected data are proprocessed in Siemens PLC, converted into JSON structure and published as MQTT 
+						<br>
+						<br>
+						<br>
+						<br>
+						message to HiveMQ MQTT Broker.
+						HiveMQ broker is equipped with Extension for Kafka. This implementation enables seamless integration of MQTT messages from OT into Kafka data streaming.
+						Kafka broker processes the incoming data messages.
+						Next, two parallel data stream pipelines are available:
+						<ul>
+						 <li> Python script which acts as Kafka consumer and stores the data into MongoDB. The results are then visible in Grafana </li>
+						 <li> ELK stack, where Logstash aggregates data from Kafka topic, processes it and ships to Elasticsearch. 
+							  Kibana allows exploring, validation and visualization of data ingested from Kafka and indexed in Elasticsearch. </li>
+						</ul>
+						
+				
+                <div class="card-action">                  
+                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/TomF777/IIoT-MQTT-KAFKA-ELK"
+                    target="_blank" data-position="top" data-tooltip="View Source for IT part"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>
+					  
+				  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/TomF777/IIoT-mqtt-kafka-elk-TiaPortal"
+                    target="_blank" data-position="top" data-tooltip="View Source for TIA Portal"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>
+                </div>
+				
+              </div>
+            </div>
+          </div>
+		  
+		  
+		  <!-- MQTT message tester -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Screenshot of  web app" src="./assets/img/project-mqtt-message-tester.PNG" style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">MQTT Message Tester<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  Automatically tests availabilty of all mqtt messages in a trace published from message player.
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title brown-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+				<b>Tech Stack:</b>
+                <ul>
+                  <li>Python</li>
+                  <li>Mqtt Protocol</li>
+				  <li>Mosquitto Broker</>
+				  <li>Docker</>
+
+                </ul>
+
+                <div class="card-action">
+                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/TomF777/Mqtt-Message-Tester.git"
+                    target="_blank" data-position="top" data-tooltip="View Source"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+		  
+		  
+		  <!-- TIG stack for solar plant monitoring -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Screenshot of  web app" src="./assets/img/project-tig-solar-plant.PNG" style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">TIG stack for IIoT<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  Collect, store and analyze data efficiently with Telegraf, InfluxDB and Grafana.
+                </p>
+              </div>
+              <div class="card-reveal">
+  
+                <span class="card-title brown-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+				Powerful solution for observability and monitoring of solar plant.
+                <ul>
+				  <b>Tech Stack:</b>
+                  <li>Telegraf</li>
+                  <li>InfluxDB</li>
+				  <li>Grafana</li>
+				  <li>Docker</li>
+				  <li>Python</li>
+				  <li>Mqtt</li>
+
+                </ul>
+                <div class="card-action">
+                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/TomF777/Mqtt-SolarPlant-Monitoring"
+                    target="_blank" data-position="top" data-tooltip="View Source"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>
+                </div>
               </div>
             </div>
           </div>
@@ -718,80 +864,9 @@ of each drug container to estimate the degradation of the drug.
             </div>
           </div>
 
-          <!-- MQTT message tester -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="./assets/img/project-mqtt-message-tester.PNG" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">MQTT Message Tester<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Automatically tests availabilty of all mqtt messages in a trace published from message player.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-				<b>Tech Stack:</b>
-                <ul>
-                  <li>Python</li>
-                  <li>Mqtt Protocol</li>
-				  <li>Mosquitto Broker</>
-				  <li>Docker</>
 
-                </ul>
 
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/TomF777/Mqtt-Message-Tester.git"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- TIG stack for solar plant monitoring -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="./assets/img/project-tig-solar-plant.PNG" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">TIG stack for IIoT<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Collect, store and analyze data effciently with Telegraf, InfluxDB and Grafana.
-                </p>
-              </div>
-              <div class="card-reveal">
-  
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-				Powerful solution for observability and monitoring of solar plant.
-                <ul>
-				  <b>Tech Stack:</b>
-                  <li>Telegraf</li>
-                  <li>InfluxDB</li>
-				  <li>Grafana</li>
-				  <li>Docker</li>
-				  <li>Python</li>
-				  <li>Mqtt</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/TomF777/Mqtt-SolarPlant-Monitoring"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <!-- DIY Home Automation -->
           <div class="col s12 m6 l4">
